@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo
+  namespace: dev-research-app
+  labels:
+    app: research-app
+    component: mongo
+    tier: database
+    environment: dev
+spec:
+  selector:
+    app: research-app
+    component: mongo
+  ports:
+    - port: 27017
+      targetPort: 27017
+  clusterIP: None
