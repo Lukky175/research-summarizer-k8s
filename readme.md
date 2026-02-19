@@ -1,5 +1,5 @@
 This Repo is for Kubernetes for Research-paper project
 
-Current- Created a Dir Structure of how things will be
+Current- Created backend yamls
 
-Next- start working with backend dir
+Next- start working with frontend yamls
