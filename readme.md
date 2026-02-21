@@ -1,32 +1,41 @@
 This Repo is for Kubernetes for Research-paper project
 
-Current- Added Resource Block In Deployment Of Both FrontEnd & Backend. (For Using HPA)
+Current- Ingress Was Being Applied Before namespace.yaml thus creating an issue, (Ingress.yaml was indirectly trying to create a new namespace). So, To solve this issue created a DIR ingress.
+
+Created a Separeate DIR For Secret.yaml.
+
+Modified Mongo-Service Type from ClusterIp: None to type: ClusterIP
+
+Renamed namespace.yml to namespace.yaml (K8s Checks it Exactly, This was Causing Issue Before).
+
+<!-- Create DNS Records -->
+Type: A
+Host: @
+Points to: <EC2 public IP>
+TTL: 600
+
+
+Type:A
+Host: www
+Points to: <EC2 public IP>
+
+
 
 <!-- Please Run all yamls (paste following codes) -->
 
+kubectl delete namespace dev-research-app
+
 kubectl apply -f namespace.yaml
-kubectl apply -f secret.yaml
-kubectl apply -f ingress.yaml
 
-cd mongo
-kubectl apply -f mongo-pvc.yaml
-kubectl apply -f mongo-deployment.yaml
-kubectl apply -f mongo-service.yaml
-cd ../
+kubectl apply -f secret/
 
+kubectl apply -f mongo/
 
-cd backend
-kubectl apply -f backend-deployment.yaml
-kubectl apply -f backend-service.yaml
-kubectl apply -f hpa-backend.yaml
-cd ../
+kubectl apply -f backend/
 
-cd frontend
-kubectl apply -f frontend-deployment.yaml
-kubectl apply -f frontend-service.yaml
-kubectl apply -f hpa-frontend.yaml
-cd ../
+kubectl apply -f frontend/
 
+kubectl apply -f ingress/
 
 <!-- x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x -->
 
@@ -38,3 +47,15 @@ kubectl get svc -n dev-research-app
 kubectl get ingress -n dev-research-app
 
 kubectl get hpa -n dev-research-app
+
+
+<!-- To Verify DNS -->
+nslookup lukkyy.online
+
+it should return ec2 public ip
+then
+
+curl http://lukkyy.online
+
+Look Address Column
+kubectl get ingress -n dev-research-app

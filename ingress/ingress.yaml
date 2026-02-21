@@ -3,11 +3,10 @@ kind: Ingress
 metadata:
   name: research-app-ingress
   namespace: dev-research-app
-  annotations:
-    kubernetes.io/ingress.class: traefik
 spec:
+  ingressClassName: traefik
   rules:
-    - host: YOUR_DOMAIN_OR_PUBLIC_IP
+    - host: lukkyy.online
       http:
         paths:
           - path: /
