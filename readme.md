@@ -1,7 +1,6 @@
 This Repo is for Kubernetes for Research-paper project
 
-Current- Replaced Frontend Image Tag.
-Added Ingress Rules
+Current- Added kustomization.yaml. (ArgoCD was not searching/ applying yamls of all directories).
 
 <!-- Create DNS Records -->
 Type: A
