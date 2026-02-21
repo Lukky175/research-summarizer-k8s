@@ -1,12 +1,7 @@
 This Repo is for Kubernetes for Research-paper project
 
-Current- Ingress Was Being Applied Before namespace.yaml thus creating an issue, (Ingress.yaml was indirectly trying to create a new namespace). So, To solve this issue created a DIR ingress.
-
-Created a Separeate DIR For Secret.yaml.
-
-Modified Mongo-Service Type from ClusterIp: None to type: ClusterIP
-
-Renamed namespace.yml to namespace.yaml (K8s Checks it Exactly, This was Causing Issue Before).
+Current- Replaced Frontend Image Tag.
+Added Ingress Rules
 
 <!-- Create DNS Records -->
 Type: A

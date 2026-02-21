@@ -9,6 +9,40 @@ spec:
     - host: lukkyy.online
       http:
         paths:
+          # Backend API routes
+          - path: /login
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 5000
+
+          - path: /register
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 5000
+
+          - path: /validate
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 5000
+
+          - path: /summarize
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 5000
+
+          # Every Other Request → frontend
           - path: /
             pathType: Prefix
             backend:
