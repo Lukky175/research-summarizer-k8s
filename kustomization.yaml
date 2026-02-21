@@ -3,8 +3,14 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - secret/
-  - mongo/
-  - backend/
-  - frontend/
-  - ingress/
+  - secret/secret.yaml
+  - mongo/mongo-deployment.yaml
+  - mongo/mongo-pvc.yaml
+  - mongo/mongo-service.yaml
+  - backend/backend-deployment.yaml
+  - backend/backend-service.yaml
+  - backend/hpa-backend.yaml
+  - frontend/frontend-deployment.yaml
+  - frontend/frontend-service.yaml
+  - frontend/hpa-frontend.yaml
+  - ingress/ingress.yaml

@@ -1,6 +1,6 @@
 This Repo is for Kubernetes for Research-paper project
 
-Current- Added kustomization.yaml. (ArgoCD was not searching/ applying yamls of all directories).
+Current- Instead of Directories in kustomization.yaml. Now we are going to pass Files
 
 <!-- Create DNS Records -->
 Type: A
