@@ -1,6 +1,6 @@
 This Repo is for Kubernetes for Research-paper project
 
-Current- Instead of Directories in kustomization.yaml. Now we are going to pass Files
+Current- Changed Frontend Image Tag To Support Pipeline.
 
 <!-- Create DNS Records -->
 Type: A

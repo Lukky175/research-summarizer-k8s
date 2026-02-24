@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: lukky175/research-summarizer-frontend:55d31c6d96180f1c12ce697d7d2ef8e53428266c
+          image: lukky175/research-summarizer-frontend:latest
           ports:
             - containerPort: 80
           resources:
