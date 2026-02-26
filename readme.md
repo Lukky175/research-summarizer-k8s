@@ -1,19 +1,9 @@
 This Repo is for Kubernetes for Research-paper project
 
-Current- Changed Frontend Image Tag To Support Pipeline.
-
-<!-- Create DNS Records -->
-Type: A
-Host: @
-Points to: <EC2 public IP>
-TTL: 600
-
-
-Type:A
-Host: www
-Points to: <EC2 public IP>
-
-
+Current- 
+1. Changed routing ingress from Traefik to NGINX.
+2. Added Host Based Routing.
+3. Added Support for Environments via overlays
 
 <!-- Please Run all yamls (paste following codes) -->
 

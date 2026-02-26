@@ -1,0 +1,57 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: research-app-ingress
+  namespace: dev-research-app
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - lukkyy.online
+    secretName: app-tls
+  rules:
+  - host: lukkyy.online
+    http:
+      paths:
+      - path: /login
+        pathType: Prefix
+        backend:
+          service:
+            name: backend
+            port:
+              number: 5000
+
+      - path: /register
+        pathType: Prefix
+        backend:
+          service:
+            name: backend
+            port:
+              number: 5000
+
+      - path: /validate
+        pathType: Prefix
+        backend:
+          service:
+            name: backend
+            port:
+              number: 5000
+
+      - path: /summarize
+        pathType: Prefix
+        backend:
+          service:
+            name: backend
+            port:
+              number: 5000
+
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend
+            port:
+              number: 80
