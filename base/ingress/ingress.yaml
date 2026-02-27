@@ -5,12 +5,15 @@ metadata:
   namespace: dev-research-app
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
 spec:
   ingressClassName: nginx
   tls:
   - hosts:
     - lukkyy.online
+    - www.lukkyy.online
     secretName: app-tls
+    
   rules:
   - host: lukkyy.online
     http:
