@@ -32,8 +32,15 @@ spec:
           env:
             - name: MONGO_URI
               value: mongodb://mongo:27017/loginApp
+
             - name: GEMINI_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: app-secrets
                   key: GEMINI_API_KEY
+
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: JWT_SECRET

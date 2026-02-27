@@ -1,7 +1,7 @@
 This Repo is for Kubernetes for Research-paper project
 
 Current- 
-1. Updated Ingress
+1. Fixed Missing env variables to run application.
 
 <!-- Please Run all yamls (paste following codes) -->
 
