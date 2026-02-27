@@ -1,7 +1,7 @@
 This Repo is for Kubernetes for Research-paper project
 
 Current- 
-1. Updated Version for Secret files.
+1. Updated Version for secretstore.yaml.
 
 <!-- Please Run all yamls (paste following codes) -->
 
