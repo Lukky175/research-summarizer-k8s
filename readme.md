@@ -1,9 +1,7 @@
 This Repo is for Kubernetes for Research-paper project
 
 Current- 
-1. Changed routing ingress from Traefik to NGINX.
-2. Added Host Based Routing.
-3. Added Support for Environments via overlays
+1. Updated Ingress
 
 <!-- Please Run all yamls (paste following codes) -->
 
