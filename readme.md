@@ -1,8 +1,8 @@
 This Repo is for Kubernetes for Research-paper project
 
 Current- 
-1. Added Support for www.lukkyy.online
-2. Removed Publically Exposed API Keys.
+1. Updated Version for Secret files.
+
 <!-- Please Run all yamls (paste following codes) -->
 
 kubectl delete namespace dev-research-app
