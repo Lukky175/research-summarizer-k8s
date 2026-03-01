@@ -1,7 +1,7 @@
 This Repo is for Kubernetes for Research-paper project
 
 Current- 
-1. Updated Version for secretstore.yaml.
+1. Added cluster-issuer.yaml, Instead of User data Added cluster-issuer in k8s repo.
 
 <!-- Please Run all yamls (paste following codes) -->
 

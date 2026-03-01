@@ -17,3 +17,4 @@ resources:
   - ingress/ingress.yaml
   - cluster/argocd-ingress.yaml
   - cluster/grafana-ingress.yaml
+  - cluster/cluster-issuer.yaml
