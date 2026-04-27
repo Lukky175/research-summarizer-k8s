@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: lukky175/research-summarizer-backend:baba023f45be1f4284db20568a584cef6f3c4816
+          image: lukky175/research-summarizer-backend:6fd76c8154c39a997cddd3ba66d92b1db0a418eb
           ports:
             - containerPort: 5000
           resources:
